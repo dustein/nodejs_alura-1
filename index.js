@@ -48,7 +48,7 @@ async function pegaArquivo(caminhoDoArquivo) {
 //     }
 // }
 
-//usando promise ------------------------------------
+//usando promise ---------------------------resultados---------
 // function pegaArquivo(caminho) {
 //     fs.promises
 //     .readFile(caminho, 'utf-8')
