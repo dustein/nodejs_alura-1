@@ -1,8 +1,8 @@
 import chalk from 'chalk';
 import fs from 'fs';
-import path from 'path';
+// import path from 'path';
 
-//pro __dirname funcionar no Replit
+// //pro __dirname funcionar no Replit
 // import { fileURLToPath } from 'url';
 // import { dirname } from 'path';
 
@@ -10,7 +10,7 @@ import path from 'path';
 // const __dirname = dirname(__filename);
 
 
-function extrairLinks(texto) {
+function extraiLinks(texto) {
     const regex = /\[([^\]]*)\]\((https?:\/\/[^$#\s].[^\s]*)\)/gm;
     const arrayResultados = [];
     let temp;
@@ -24,15 +24,18 @@ function trataErro(erro) {
         throw new Error(chalk.red(erro.code, ' Erro - não existe o arquivo'));
 }
 
-async function pegaArquivo(caminhoDeArquivo) {
-    // const caminhoAbsoluto = path.join(__dirname, '..', caminho);    
-    const caminhoAbsoluto = path.join("/home/runner/AluraNodeJS1biblioteca", caminhoDeArquivo, "..")
+async function pegaArquivo(caminhoDoArquivo) {
     const encoding = 'utf-8';
-    const arquivos = await fs.promises.readdir(caminhoAbsoluto, { encoding });
-    console.log('arquivos', arquivos);
+    try {
+        const texto = await fs.promises.readFile(caminhoDoArquivo, encoding);
+        return extraiLinks(texto);
+    } catch(erro) {
+        console.log("OPS")
+        trataErro(erro);
+    }
+};
     
-}
-
+    
 //usando async await - try catch --------------------
 // async function pegaArquivo(caminhoDeArquivo) {
 //     try {
