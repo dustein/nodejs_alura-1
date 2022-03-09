@@ -1,0 +1,29 @@
+{
+  "name": "nodejs_alura-1",
+  "version": "1.0.0",
+  "description": "Curso NodeJS da plataforma Alura. Primeiro mõdulo. \"Criando sua primeira biblioteca\"",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cli": "node cli.js ./arquivos/file1.md"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dustein/nodejs_alura-1.git"
+  },
+  "keywords": [],
+  "author": "DuStein",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dustein/nodejs_alura-1/issues"
+  },
+  "homepage": "https://github.com/dustein/nodejs_alura-1#readme",
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "node-fetch": "^3.2.2"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1"
+  }
+}
