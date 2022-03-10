@@ -1,3 +1,3 @@
 Curso NodeJS da plataforma Alura.
-Primeiro mõdulo.
+Primeiro módulo.
 "Criando sua primeira biblioteca"
